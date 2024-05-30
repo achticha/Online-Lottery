@@ -7,4 +7,4 @@
 ฟังก์ชันการตรวจสอบผลรางวัล, การรายงานรายได้, และการวิเคราะห์กำไร
 ใช้ ReactJS (JavaScript) ในการพัฒนาส่วนติดต่อผู้ใช้ (Frontend) 
 ใช้ NestJS และ Node.js ในการพัฒนาส่วนหลังบ้าน (Backend) โดยใช้ TypeScript
-ใช้ Prisma สำหรับการจัดการฐานข้อมูล PostgreSQL
+ใช้ Prisma สำหรับการจัดการฐานข้อมูล PostgreSQ ซึ่งเป็นรูปแบบของSQL database
