@@ -1,0 +1,305 @@
+.backcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../image/sunset-mountain-beautiful-digital-art-scenery-hd-wallpaper-uhdpaper.com-183@1@n.jpg)
+    no-repeat;
+    background-size:cover ;
+    background-position: center;
+}
+.wrapper {
+    width: 520px;
+    height: 520px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255, .2);
+    box-shadow: 0 0 10px  rgba(0, 0, 0, .2);
+    backdrop-filter: blur(15px);
+    color: rgb(255, 255, 255);
+    border-radius: 69px;
+    padding: 50px 50px;  
+}
+
+.wrapper h1 {
+    font-size: 38px;
+    text-align: center;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+    
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 55px 0;
+    color: #ffffff;
+}
+
+.input-box label {
+    color: #f2e7eb;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 40px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box label {
+    color: #f2e7eb;
+    position: absolute;
+    top:50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -15px;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.45);
+}
+
+
+.input-box .icon {
+    position: absolute;
+    right: 20px;
+    top: 33%;
+    transform: translate(-50%);
+    font-size: 16px;
+}
+.input-box input:focus~.icon,
+.input-box input:valid~.icon{
+    top: -23px;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.45);
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -30px 0 20px;
+}
+
+.remember-forgot label input {
+    accent-color: #062895;
+    margin-right: 4px;
+}
+
+.remember-forgot a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #ffffff;
+    text-decoration: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline
+}
+
+.bn button {
+    background-image: linear-gradient(225deg, #ff33c2 20%,
+    #30d2ff 50%, #f34bff 100% );
+    border-radius: 40px;
+    border: none;
+    box-sizing: border-box;
+    color:#fb5290;
+    display: block;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 4px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .bn button:hover {
+    color: #fff;
+  }
+  
+  .bn button .bn31span {
+    align-items: center;
+    background: #ffffff;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background 0.5s ease;
+    width: 100%;
+  }
+  
+  .bn button:hover .bn31span {
+    background: transparent;
+  }
+
+/* 
+.bn button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    background: none;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+
+}
+
+.bn button:before, .bn button:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10em;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    width: 105%;
+    height: 105%;
+    content: "";
+    z-index: -2;
+    background-size: 400% 400%;
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+}
+
+.bn button:before {
+-webkit-filter: blur(7px);
+  filter: blur(7px);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-animation: pulse 10s infinite ease;
+  animation: pulse 10s infinite ease;
+}
+
+.bn button:after {
+    -webkit-filter: blur(0.3px);
+    filter: blur(0.3px);
+}
+
+.bn button:hover:before  {
+    width: 115%;
+    height: 115%;
+} */
+
+/* .wrapper button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, 0.5),
+    0px 0px 0px 0px rgba(39, 200, 255, 0.5);
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    background-color: #ff3cac;
+    background-image: linear-gradient(225deg, #87ffb5 0%,
+    #66deff 50%, #f9a2ff 100% );
+}
+
+.wrapper button:hover {
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.5),
+    -10px 10px 25px 0px rgba(39, 200, 255, 0.5);
+}
+
+.wrapper button:hover::after {
+    transform: rotate(150deg);
+}
+
+.wrapper button:after {
+    content: "";
+    width: 100%;
+    height: 45px;
+    overflow: hidden;
+    cursor: pointer;
+    position: inherit ;
+    top: -50px;
+    left: 100px;
+    background-color: #ff3cac;
+    background-image: linear-gradient(225deg, #ffdf87 0%,
+    #ff6666 50%, #f2ffb0 100% );
+    z-index: -1;
+    transition: all 0.25s ease;
+} */
+
+
+
+
+/* .buttonforlogin {
+    background: #062895;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, 0.5),
+    0px 0px 0px 0px rgba(39, 200, 255, 0.5);
+} */
+
+/* .buttonforlogin:hover {
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, 0.5),
+    -10px 10px 25px 0px rgba(39, 200, 255, 0.5);
+} */
+/* .buttonforlogin:hover::after {
+    transform: rotate(150deg);
+} */
+
+
+/* .buttonforlogin::after {
+    content: auto;
+    width: 520px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-color: #ff3cac;
+    background-image: linear-gradient(225deg, #87ffb5 0%,
+    #66deff 50%, #f9a2ff 100% );
+    z-index: -1;
+    transition: all 0.25s ease;
+} */
+
+
+

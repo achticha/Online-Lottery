@@ -1,0 +1,114 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int     @id @default(autoincrement())
+  name     String? @unique
+  user     String? @unique
+  password String
+  level    String?
+  email    String? @unique
+  phone    String?
+  address  String?
+}
+
+model Company {
+  id      Int    @id @default(autoincrement())
+  name    String
+  address String
+  phone   String
+}
+
+model Lotto {
+  id             Int              @id @default(autoincrement())
+  number         String
+  roundNumber    Int
+  bookNumber     Int
+  cost           Int
+  sale           Int
+  BillSaleDatail BillSaleDatail[]
+  isCheckBonus   Int              @default(0) // 0 = not check, 1 = check
+  isSale         Int              @default(0) // 0 = in stock , 1 = out stock
+  lottoDate      DateTime         @default(now())
+}
+
+model BillSale {
+  id                Int               @id @default(autoincrement())
+  payDate           DateTime?
+  createdDate       DateTime
+  customerName      String
+  customerPhone     String
+  customerAddress   String?
+  billSaleDetail    BillSaleDatail[]
+  payTime           String?
+  payRemark         String?
+  payAlertData      DateTime?
+  BillSaleForSend   BillSaleForSend[]
+  transferMoneyDate DateTime?
+  transferMoneyTime String?
+  deliverDate       DateTime?
+  price             Int?
+}
+
+model BillSaleDatail {
+  id                    Int                     @id @default(autoincrement())
+  billSaleId            Int
+  billSale              BillSale                @relation(fields: [billSaleId], references: [id])
+  lottoId               Int
+  lotto                 Lotto                   @relation(fields: [lottoId], references: [id])
+  price                 Int?
+  BillSaleDatailIsBonus BillSaleDatailIsBonus[]
+}
+
+model BillSaleForSend {
+  id           Int      @id @default(autoincrement())
+  billSaleId   Int
+  billSale     BillSale @relation(fields: [billSaleId], references: [id])
+  sendName     String?
+  sendData     DateTime
+  sendTime     String
+  traceCode    String
+  sendPlatform String
+  remark       String?
+  price        Int
+}
+
+model BonusResultDetail {
+  id                    Int                     @id @default(autoincrement())
+  number                String
+  price                 Int
+  bonusDate             DateTime
+  BillSaleDatailIsBonus BillSaleDatailIsBonus[]
+  LottoIsBonus          LottoIsBonus[]
+}
+
+model BillSaleDatailIsBonus {
+  id                  Int                @id @default(autoincrement())
+  billSaleDetailId    Int
+  billSaleDetail      BillSaleDatail     @relation(fields: [billSaleDetailId], references: [id])
+  bonusPrice          Int
+  bonusDate           DateTime
+  number              String
+  bonusResultDetailId Int
+  BonusResultDetail   BonusResultDetail? @relation(fields: [bonusResultDetailId], references: [id])
+}
+
+model LottoIsBonus {
+  id                  Int               @id @default(autoincrement())
+  bonusResultDetailId Int
+  BonusResultDetail   BonusResultDetail @relation(fields: [bonusResultDetailId], references: [id])
+}
+
+model Banner {
+  id   Int    @id @default(autoincrement())
+  name String
+}
